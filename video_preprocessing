@@ -1,0 +1,31 @@
+import cv2
+import os
+
+# Set the path to the video file
+video_path = 'path/to/video/file.mp4'
+
+# Create a directory to save the frames
+output_path = 'path/to/output/directory'
+if not os.path.exists(output_path):
+    os.makedirs(output_path)
+
+# Open the video file
+cap = cv2.VideoCapture(video_path)
+
+# Loop through the frames and save them as images
+frame_count = 0
+while(cap.isOpened()):
+    # Read the next frame
+    ret, frame = cap.read()
+
+    if ret:
+        # Save the frame as an image file
+        frame_path = os.path.join(output_path, f'frame{frame_count:04d}.jpg')
+        cv2.imwrite(frame_path, frame)
+        frame_count += 1
+    else:
+        break
+
+# Release the video capture object and close all windows
+cap.release()
+cv2.destroyAllWindows()
