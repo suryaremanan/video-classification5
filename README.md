@@ -12,3 +12,9 @@ The model is deployed using streamlit. You can install it in your local system u
 then type 
 
 ``` python deployment.py ```
+
+NOTE: the model is only 53% accurate so the videos may get misclassified majority of the time.
+
+## Key Takeaways
+
+- 
