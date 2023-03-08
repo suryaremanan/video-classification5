@@ -7,4 +7,8 @@ data_collection.py will search for music videos and add their video IDs to the v
 ## Deployment of the model
 
 The model is deployed using streamlit. You can install it in your local system using : 
-''' pip install streamlit '''
+``` pip install streamlit ```
+
+then type 
+
+``` python deployment.py ```
